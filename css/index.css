@@ -1,0 +1,179 @@
+/* 第一屏 */
+
+/* 因为fullpage会帮我们自动给每一屏生成一个div，我们写的元素都包在了生成的div里面
+    所以要加伸缩布局，应该加在生成的这个div上
+*/
+.section1>div{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section1 .text img{
+
+    opacity: .5;
+    margin-left: 30px;
+}
+
+
+.section1.animation .text img{
+
+    transition: all 1s;
+    opacity: 1;
+    margin-left: 0;
+}
+
+
+/* -----------------  第二屏开始 ---------------------------- */
+.section2>div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section2>div .shield{
+
+   width:500px;
+   min-width: 500px;
+}
+
+.section2>div>img{
+
+    width:635px;
+    min-width: 635px;
+}
+
+/* 找到第三块盾牌 */
+.section2>div .shield img:nth-child(3){
+
+    transform: translate(700px,450px) rotate(370deg);
+}
+
+
+.section2.animation>div .shield img:nth-child(3){
+
+    transition: all 1s;
+    transform: none;
+}
+
+
+.section3>div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.section3 .circle{
+
+    width: 453px;
+    height: 449px;
+    background: url('../images/circle.png');
+}
+
+.section3 .circle{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.section3 .circle img{
+
+    transform: translate(-750px,500px);
+}
+
+.section3.animation .circle img{
+
+    transition:  all 1s;
+    transform: none;
+}
+
+
+/* ------------------  第四屏开始 ------------------------- */
+.section4 .search{
+
+    width: 529px;
+    height: 66px;
+    background: url('../images/search.png');
+    position: relative;
+}
+
+.section4 .searchBox{
+
+    height:438px;
+
+    transform: translate(-1000px);
+}
+
+.section4>div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section4 .search .key{
+
+    position: absolute;
+    left:20px;
+    top:22px;
+    /* width: 99px; */
+
+    /* transition必须之前有些这个属性，才有动画效果 */
+    width:0;
+    height: 22px;
+    background: url('../images/key.png')
+}
+
+.section4 .result{
+
+    width: 529px;
+    /* height: 372px; */
+    height:0;
+    background: url('../images/result.png');
+}
+
+.section4.animation .searchBox{
+
+    transition:  all 1s;
+    transform: none;
+}
+
+.section4.animation .search .key{
+    width: 99px;
+    transition:  all 1s 1s;
+}
+
+
+.section4.animation .result{
+
+    transition: all 1s 2s;
+    height:372px;
+}
+
+
+/* ------------ 第五屏开始 ------------------ */
+.section5>div{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section5 .browser{
+
+    width: 1005px;
+    border: 5px solid white;
+    flex:1;
+    position: relative;
+}
+
+.section5 .browser img:nth-child(2){
+
+    position: absolute;
+    right:0;
+    bottom: 0;
+}
